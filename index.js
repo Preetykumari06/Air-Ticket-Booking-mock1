@@ -1,11 +1,15 @@
 const express = require("express");
 const {connection} = require("./Config/db");
+const UserRouter = require("./Routes/User.router");
 
-const port= 3000;
+const port= process.env.port;
 
 
 const app=express();
 app.use(express.json());
+
+
+app.use("/api",UserRouter)
 
 app.get("/", (req,res)=>{
   res.send("Welcome To Air Ticket Booking Backend");
