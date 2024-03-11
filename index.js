@@ -2,6 +2,7 @@ const express=require("express")
 const {connection}=require("./Config/db");
 const { UserRouter } = require("./Routes/User.router");
 const FlightRouter = require("./Routes/Flight.router");
+const BookingRouter = require("./Routes/Booking.router");
 
 
 
@@ -14,8 +15,9 @@ app.use(express.json());
 
 
 
-app.use("/api",UserRouter)
-app.use("/api",FlightRouter)
+app.use("/api",UserRouter);
+app.use("/api",FlightRouter);
+app.use("/api", BookingRouter);
 
 
 app.get("/", (req,res)=>{

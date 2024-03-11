@@ -4,9 +4,6 @@ const AddFlightMiddleware = require('../Middlewares/AddFlightMiddleware');
 
 const FlightRouter = express.Router();
 
-FlightRouter.get('/', (req, res) => {
-    res.send({ msg: 'Welcome to filght Router' })
-})
 
 FlightRouter.get('/flights', async (req, res) => {
     try {
@@ -65,7 +62,7 @@ FlightRouter.delete('/flights/:id', async (req, res) => {
 module.exports = FlightRouter;
 
 
-
+// http://localhost:3000/api// --- GET(welcome)
 // http://localhost:3000/api/flights ---- POST
 // http://localhost:3000/api/flights ----- GET
 // http://localhost:3000/api//flights/65eeda31db1e420a610253e9 ---- /flight/:id ---> GET
