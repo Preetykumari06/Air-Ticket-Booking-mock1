@@ -33,7 +33,7 @@ UserRouter.post('/login', loginMiddleware,(req, res) => {
 
 
 
-module.exports = UserRouter;
+module.exports = {UserRouter};
 
 
 
@@ -43,3 +43,9 @@ module.exports = UserRouter;
 //     "email": "preety12@gmail.com",
 //     "password": "preety"
 //   }
+
+// http://localhost:3000/api/login
+//   {
+    //     "email": "preety12@gmail.com",
+    //     "password": "preety"
+    //   }
